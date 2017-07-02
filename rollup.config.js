@@ -10,17 +10,17 @@ import { prepack } from 'prepack';
  * @param {Object} [options]
  */
 const prepackPlugin = options => ({
-  name: 'prepack',
-  transformBundle: source => {
-    const { code, map } = prepack(source, options);
-    return { code: code.trim(), map };
-  }
+	name: 'prepack',
+	transformBundle: source => {
+		const { code, map } = prepack(source, options);
+		return { code: code.trim(), map };
+	}
 });
 
 export default {
-  entry: 'src/index.js',
-  dest: 'dist/bundle.js',
-  format: 'umd',
-  moduleName: 'midiUtils',
-  plugins: [resolve(), babel({ exclude: 'node_modules/**' }), prepackPlugin()]
+	entry: 'src/index.js',
+	dest: 'dist/bundle.js',
+	format: 'umd',
+	moduleName: 'midiUtils',
+	plugins: [resolve(), babel({ exclude: 'node_modules/**' }), prepackPlugin()]
 };

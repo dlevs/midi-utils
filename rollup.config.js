@@ -1,6 +1,6 @@
-import resolve from "rollup-plugin-node-resolve";
-import babel from "rollup-plugin-babel";
-import { prepack } from "prepack";
+import resolve from 'rollup-plugin-node-resolve';
+import babel from 'rollup-plugin-babel';
+import { prepack } from 'prepack';
 
 /**
  * Adapted from the rollup-plugin-prepack package on npm.
@@ -10,7 +10,7 @@ import { prepack } from "prepack";
  * @param {Object} [options]
  */
 const prepackPlugin = options => ({
-  name: "prepack",
+  name: 'prepack',
   transformBundle: source => {
     const { code, map } = prepack(source, options);
     return { code: code.trim(), map };
@@ -18,9 +18,9 @@ const prepackPlugin = options => ({
 });
 
 export default {
-  entry: "src/index.js",
-  dest: "dist/bundle.js",
-  format: "umd",
-  moduleName: "midiUtils",
-  plugins: [resolve(), babel({ exclude: "node_modules/**" }), prepackPlugin()]
+  entry: 'src/index.js',
+  dest: 'dist/bundle.js',
+  format: 'umd',
+  moduleName: 'midiUtils',
+  plugins: [resolve(), babel({ exclude: 'node_modules/**' }), prepackPlugin()]
 };

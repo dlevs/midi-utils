@@ -12,7 +12,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx}": [
-      "prettier --parser flow --write",
+      "prettier --parser flow --single-quote --write",
       "git add"
     ]
   },

@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
-    "(*|src/**/*).{js,jsx}": [
+    "(*.js|src/**/*.{js,jsx})": [
       "prettier --parser flow --write",
       "git add"
     ]

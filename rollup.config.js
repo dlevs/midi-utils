@@ -26,5 +26,6 @@ export default {
 		resolve(),
 			babel({exclude: 'node_modules/**'}),
 					prepackPlugin()
+		
 	]
 };

@@ -4,7 +4,6 @@ const DEFUALT_TUNING = 440;
 const NOTE_OFFSET = 69;
 const NOTES_PER_OCTAVE = 12;
 
-
 export const createLogBaseFn = (base: number) => (n: number): number => {
 	return Math.log(base) / Math.log(n);
 };
